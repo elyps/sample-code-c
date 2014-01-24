@@ -1,0 +1,54 @@
+//
+//  main.c
+//  Benutzer-Eingabe Formatcheck (Sicherheitslücken schliessen!)
+//
+//  Created by elyps on 24/01/14.
+//  Copyright (c) 2014 elyps. All rights reserved.
+//
+
+#include <stdio.h>
+
+int main(void) {
+    int a, b, check;
+    
+    printf("Bitte zwei Zahlen eingeben: \n");
+    check = scanf("%d %d",&a ,&b);
+    
+    getchar();
+    
+    
+    
+    /* Wenn Zwei Zahlen eingegeben wurde und somit alles auf anhieb richtig ist */
+    
+    if(check == 2) {
+        printf("Beide Zahlen richtig %d und %d\n",a ,b);
+    }
+    
+    
+    /* die zweite Eingabe war falsch */
+    
+    else if(check == 1) {
+        printf("Die 2.Zahl hat das falsche Format!!\n");
+        printf("Bitte Eingabe nochmal wiederholen: \n");
+        
+        /* noch einmal Versuchen lassen die 2. Zahl zu korrigieren */
+       
+        check = scanf("%d",&b);
+        
+        fflush(stdin);
+        
+        if(check)
+            printf("Eingabe Okay. \nIhre Zahlen sind: %d und %d\n",a,b);
+        else
+            printf("Leider nochmals falsch eingegeben\ndas Programm wird nun beendet!");
+    }
+    
+    
+    /*Wenn die erste Eingabe schon falsch gemacht wurde*/
+    
+    else
+        printf("Das ist keine Zahl!\n" );
+    
+    
+    return 0;
+}
