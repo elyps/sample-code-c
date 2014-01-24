@@ -1,0 +1,43 @@
+//
+//  main.c
+//
+//  Benutzer Eingabe & richtige Compiler Ausgabe von 3 Buchstaben nacheinander
+//
+//  do-while Funktion um das Newline-Zeichen aus dem Puffer herauszuziehen
+//
+//  Created by elyps on 24/01/14.
+//  Copyright (c) 2014 elyps. All rights reserved.
+//
+
+
+#include <stdio.h>
+
+int main(void)
+{
+
+    char a,b,c;
+    
+    printf("Bitte den 1.Buchstaben eingeben: \n");
+    
+    /*Funktion um das \n-Zeichen aus dem Puffer heraus zu ziehen*/
+    do {scanf("%c", &a);}
+    while (getchar() != '\n');
+    
+    
+    printf("Bitte den 2.Buchstaben eingeben: \n");
+    
+    /*Funktion um das \n-Zeichen aus dem Puffer heraus zu ziehen*/
+    do {scanf("%c", &b);}
+    while (getchar() != '\n');
+    
+    printf("Bitte den 3.Buchstaben eingeben: \n");
+    
+    /*Funktion um das \n-Zeichen aus dem Puffer heraus zu ziehen*/
+    do {scanf("%c", &c);}
+    while (getchar() != '\n');
+    
+    printf("Die eingegeben Buchstaben lauten: \n%c, %c und %c\n" , a,b,c);
+    
+    return 0;
+}
+
