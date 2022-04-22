@@ -1,4 +1,4 @@
-repo.sample.code.c
+sample-code-c
 ==================
 
 This is an Repository for Sample Code Snippets in 'C'
